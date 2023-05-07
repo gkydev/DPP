@@ -6,8 +6,11 @@ contract DigitalProductPassport {
     // Maximum uint256 value
     uint256 MAX_INT = 2**256 - 1;
 
-    address _admin = msg.sender;
+    address _admin;
 
+    constructor() {
+        _admin = msg.sender;
+    }
 
     // Struct to represent DPP data
     struct DPP_DATA {
