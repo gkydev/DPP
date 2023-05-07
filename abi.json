@@ -1,0 +1,357 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			}
+		],
+		"name": "DPPAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productType",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productDetail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint32",
+				"name": "manufactureDate",
+				"type": "uint32"
+			}
+		],
+		"name": "addDPP",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			}
+		],
+		"name": "checkAuth",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "dppList",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productType",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productDetail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint32",
+				"name": "manucaftureDate",
+				"type": "uint32"
+			},
+			{
+				"internalType": "bool",
+				"name": "isMerged",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			}
+		],
+		"name": "getDPPHistory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productDetail",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "manucaftureDate",
+						"type": "uint32"
+					},
+					{
+						"internalType": "address[]",
+						"name": "allowedAdresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isMerged",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "mergedFrom",
+						"type": "uint256[]"
+					}
+				],
+				"internalType": "struct DigitalProductPassport.DPP_DATA[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			}
+		],
+		"name": "getFirstDPP",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productDetail",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "manucaftureDate",
+						"type": "uint32"
+					},
+					{
+						"internalType": "address[]",
+						"name": "allowedAdresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isMerged",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "mergedFrom",
+						"type": "uint256[]"
+					}
+				],
+				"internalType": "struct DigitalProductPassport.DPP_DATA",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			}
+		],
+		"name": "getLastDPP",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productDetail",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "manucaftureDate",
+						"type": "uint32"
+					},
+					{
+						"internalType": "address[]",
+						"name": "allowedAdresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isMerged",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "mergedFrom",
+						"type": "uint256[]"
+					}
+				],
+				"internalType": "struct DigitalProductPassport.DPP_DATA",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productType",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productDetail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint32",
+				"name": "manufactureDate",
+				"type": "uint32"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "mergerIdentifiers",
+				"type": "uint256[]"
+			}
+		],
+		"name": "mergeDPP",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uniqueIdentifier",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productType",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productDetail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint32",
+				"name": "manufactureDate",
+				"type": "uint32"
+			}
+		],
+		"name": "updateDPP",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
