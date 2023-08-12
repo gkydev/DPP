@@ -23,7 +23,7 @@ contract DigitalProductPassport {
         uint256[] mergedFrom;
     }
 
-    // Dictionary that maps a randNumber to a list of DPP_DATA structs
+    // Dictionary that maps a uniqueIdentifier to a list of DPP_DATA structs
     mapping (uint256 => DPP_DATA[]) public dppList;
 
     function checkAuth(uint256 uniqueIdentifier) public view returns (bool) {
